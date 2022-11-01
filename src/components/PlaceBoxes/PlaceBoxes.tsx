@@ -5,6 +5,7 @@ import './PlaceBoxes.css'
 
 interface Props {
   boxes: BoxesType[];
+  click:  (index: number) => void;
 }
 
 const PlaceBoxes:React.FC<Props> = props => {
@@ -12,7 +13,7 @@ const PlaceBoxes:React.FC<Props> = props => {
 
   return (
     <div className={'Boxes'}>
-      {props.boxes.map((item, index) => <Box key={index} box={item}/> )}
+      {props.boxes.map((item, index) => <Box key={index} click={() => props.click(index)} box={item}/> )}
     </div>
   );
 };

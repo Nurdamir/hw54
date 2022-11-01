@@ -1,9 +1,10 @@
 import React from 'react';
 import {BoxesType} from "../../types";
+import "./Box.css";
 
 interface Props {
   box: BoxesType;
-  click?: React.MouseEventHandler;
+  click: React.MouseEventHandler;
 }
 
 
@@ -16,9 +17,7 @@ const Box: React.FC<Props> = props => {
   }
 
       return (
-        <div className={color.join(' ')} onClick={props.click} >
-g
-        </div>
+        <div className={color.join(' ')} onClick={props.click}></div>
       );
 };
 
